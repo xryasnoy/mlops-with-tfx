@@ -14,12 +14,12 @@ This example implements the end-to-end [MLOps process](https://services.google.c
 3. Open the JupyterLab then open a new Terminal
 4. Clone the repository to your AI Notebook instance:
     ```
-    git clone https://github.com/GoogleCloudPlatform/mlops-with-vertex-ai.git
+    git clone https://github.com/xryasnoy/mlops-with-tfx.git
     cd mlops-with-vertex-ai
     ```
 5. Install the required Python packages:
     ```
-    pip install tfx==1.2.0 --user
+    pip install tfx==1.2.0 --user => ERROR: No matching distribution found for tfx==1.2.0
     pip install -r requirements.txt
     ```
     ---
