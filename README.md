@@ -20,7 +20,7 @@ This example implements the end-to-end [MLOps process](https://services.google.c
 5. Install the required Python packages:
     ```
     pip install tfx==1.2.0 --user => ERROR: No matching distribution found for tfx==1.2.0
-    pip install -r requirements.txt
+    pip install -r requirements.txt # try: remove exact versions
     ```
     ---
     **NOTE**: You can ignore the pip dependencies issues. These will be fixed when upgrading to subsequent TFX version.
@@ -31,7 +31,13 @@ This example implements the end-to-end [MLOps process](https://services.google.c
    sudo apt-get install google-cloud-sdk
    gcloud components update
    ```
-
+7. Enable Google Cloud APIs:
+    ```
+    # BigQuery API
+    # Cloud Build API
+    # Dataflow API
+    # Vertex AI API
+    ```
 ## Dataset Management
 
 The [Chicago Taxi Trips](https://pantheon.corp.google.com/marketplace/details/city-of-chicago-public-data/chicago-taxi-trips) dataset is one of [public datasets hosted with BigQuery](https://cloud.google.com/bigquery/public-data/), which includes taxi trips from 2013 to the present, reported to the City of Chicago in its role as a regulatory agency. The task is to predict whether a given trip will result in a tip > 20%.
