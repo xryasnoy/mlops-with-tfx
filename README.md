@@ -8,30 +8,38 @@ This example implements the end-to-end [MLOps process](https://services.google.c
 
 
 ## Getting started
-
-1. [Setup your MLOps environment](provision) on Google Cloud.
-2. Start your AI Notebook instance.
-3. Open the JupyterLab then open a new Terminal
-4. Clone the repository to your AI Notebook instance:
+0. Enable Notebooks API. Name: p3.
+0. Environment: Python 3 (latest).
+0. Machine type: e2-standard-2.
+0. Misc: Install Cloud Monitoring.
+3. [Setup your MLOps environment](provision) on Google Cloud.
+4. Start your AI Notebook instance.
+5. Open the JupyterLab then open a new Terminal
+6. Clone the repository to your AI Notebook instance:
     ```
     git clone https://github.com/xryasnoy/mlops-with-tfx.git
-    cd mlops-with-vertex-ai
+    cd mlops-with-tfx
     ```
-5. Install the required Python packages:
+7. Install the required Python packages:
     ```
-    pip install tfx==1.2.0 --user => ERROR: No matching distribution found for tfx==1.2.0
-    pip install -r requirements.txt # try: remove exact versions
+    pip install tfx --user #No matching distribution found for tfx==1.2.0.
+    #tensorboard -2.15.2
+    #tensorflow  -2.15.1
+    #tensorflow-data-validation -1.15.1
+    #tensorflow-metadata        -1.15.0
+    #tensorflow-transform       -1.15.0
+    pip install -r requirements.txt #Try remove exact versions.
     ```
     ---
     **NOTE**: You can ignore the pip dependencies issues. These will be fixed when upgrading to subsequent TFX version.
     
     ---
-6. Upgrade the `gcloud` components:
+8. #Upgrade the `gcloud` components:
     ```
-   sudo apt-get install google-cloud-sdk
-   gcloud components update
+   #sudo apt-get install google-cloud-sdk
+   #gcloud components update
    ```
-7. Enable Google Cloud APIs:
+9. Enable Google Cloud APIs:
     ```
     # BigQuery API
     # Cloud Build API
